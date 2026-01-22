@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Mobiles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="table-container">
+        <div class="table-header">
+            <h1>Manage Mobiles</h1>
+            <button class="btn-add" onclick="openModal()">Add Mobile</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mobile</th>
+                    <th>Price(Rs)</th>
+                    <th>RAM</th>
+                    <th>Storage</th>
+                    <th colspan="2">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="mobile-list"></tbody>
+        </table>
+    </div>
+
+    <div id="mobileModal" class="modal">
+        <div class="modal-content">
+            <h2 id="modalTitle">Add Mobile</h2>
+            <form id="mobileForm">
+                <input type="hidden" id="mobileId">
+                <input type="text" id="name" placeholder="Mobile Name" required>
+                <input type="number" id="price" placeholder="Price" required>
+                <input type="text" id="ram" placeholder="RAM" required>
+                <input type="text" id="storage" placeholder="Storage" required>
+                <div class="modal-btns">
+                    <button type="submit" class="btn-add">Save</button>
+                    <button type="button" class="btn-delete" onclick="closeModal()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
