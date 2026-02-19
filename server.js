@@ -3,7 +3,8 @@ const db = require('./db');
 const app = express();
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(__dirname));
+
 
 // Routes
 app.get('/api/mobiles', async (req, res) => {
